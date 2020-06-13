@@ -1,0 +1,175 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.iOS/CollectionViewDemo.iOS.csproj": {}
+  },
+  "projects": {
+    "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.iOS/CollectionViewDemo.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.iOS/CollectionViewDemo.iOS.csproj",
+        "projectName": "CollectionViewDemo.iOS",
+        "projectPath": "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.iOS/CollectionViewDemo.iOS.csproj",
+        "packagesPath": "/Users/himanshudwivedi/.nuget/packages/",
+        "outputPath": "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.iOS/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/himanshudwivedi/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.csproj": {
+                "projectPath": "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.1.0.442, )"
+            },
+            "MonkeyCache.FileStore": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "Xamarin.FFImageLoading.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.FFImageLoading.Svg.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.356, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[1.4.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.csproj",
+        "projectName": "CollectionViewDemo",
+        "projectPath": "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo.csproj",
+        "packagesPath": "/Users/himanshudwivedi/.nuget/packages/",
+        "outputPath": "/Users/himanshudwivedi/Documents/workspace/CollectionViewDemo/CollectionViewDemo/CollectionViewDemo/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/himanshudwivedi/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.1.0.442, )"
+            },
+            "MonkeyCache.FileStore": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.2.8, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "Xamarin.FFImageLoading.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.FFImageLoading.Svg.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.356, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[1.4.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

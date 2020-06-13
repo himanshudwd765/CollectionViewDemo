@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout
+    x:Class="CollectionViewDemo.Templates.NewsArticleCardComponent"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    Margin="20,5"
+    HeightRequest="300"
+    mc:Ignorable="d">
+
+    <AbsoluteLayout VerticalOptions="FillAndExpand">
+        <yummy:PancakeView
+            x:Name="container"
+            BackgroundColor="{DynamicResource background}"
+            CornerRadius="10"
+            Elevation="8"
+            HasShadow="True" />
+        <yummy:PancakeView x:Name="imgContainer" CornerRadius="10">
+            <ffimageloading:CachedImage
+                x:Name="img"
+                Aspect="AspectFill"
+                LoadingPlaceholder="imageplaceholder.png"
+                Source="{Binding UrlToImage}" />
+        </yummy:PancakeView>
+        <StackLayout x:Name="textContainer">
+            <Label
+                Margin="0,20,0,0"
+                FontFamily="{StaticResource InterBold}"
+                FontSize="Large"
+                LineBreakMode="TailTruncation"
+                Text="{Binding Title}"
+                TextColor="{DynamicResource mainLabel}" />
+            <Label
+                FontSize="Small"
+                LineBreakMode="TailTruncation"
+                MaxLines="2"
+                Text="{Binding Description}"
+                TextColor="{DynamicResource secondaryLabel}"
+                VerticalOptions="Center" />
+        </StackLayout>
+    </AbsoluteLayout>
+</StackLayout>

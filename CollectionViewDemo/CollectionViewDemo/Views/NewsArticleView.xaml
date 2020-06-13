@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CollectionViewDemo.Views.NewsArticleView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fontawesome="clr-namespace:FontAwesome"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:template="clr-namespace:CollectionViewDemo.Templates"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    x:Name="MainView"
+    BackgroundColor="{DynamicResource mainBackground}"
+    mc:Ignorable="d">
+
+    <NavigationPage.TitleView>
+        <StackLayout Padding="10,0" Orientation="Horizontal">
+            <Label
+                FontFamily="{StaticResource InterBold}"
+                FontSize="Title"
+                HorizontalOptions="StartAndExpand"
+                Text="News Article"
+                TextColor="{DynamicResource mainLabel}"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="cardViewTemplate">
+                <template:NewsArticleCardComponent />
+            </DataTemplate>
+            <DataTemplate x:Key="tileViewTemplate">
+                <template:NewsArticleTileComponent />
+            </DataTemplate>
+            <template:NewsArticleTemplateSelector
+                x:Key="newsArticleTemplateSelector"
+                CardViewTemplate="{StaticResource cardViewTemplate}"
+                TileViewTemplate="{StaticResource tileViewTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="{OnPlatform Android='0, 10, 0, 0', iOS='0'}" Spacing="15">
+        <StackLayout
+            Margin="0,0,20,0"
+            Orientation="Horizontal"
+            Spacing="0">
+
+            <yummy:PancakeView
+                x:Name="tileFrame"
+                BackgroundColor="{StaticResource primaryColor}"
+                CornerRadius="5, 0, 5 ,0"
+                HorizontalOptions="EndAndExpand"
+                Style="{StaticResource listOptionLayoutStyle}">
+                <Label
+                    x:Name="squareIcon"
+                    ClassId="CardView"
+                    FontFamily="{DynamicResource FontAwesomeSolid}"
+                    Style="{StaticResource listOptionLayoutTextStyle}"
+                    Text="{x:Static fontawesome:FontAwesomeIcons.SquareFull}"
+                    TextColor="{DynamicResource background}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="ColorStates">
+                        <VisualState x:Name="Select">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{StaticResource primaryColor}" />
+                                <Setter TargetName="squareIcon" Property="Label.TextColor" Value="{DynamicResource background}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="UnSelect">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{DynamicResource background}" />
+                                <Setter TargetName="squareIcon" Property="Label.TextColor" Value="{StaticResource primaryColor}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </yummy:PancakeView>
+
+            <yummy:PancakeView
+                x:Name="listFrame"
+                BackgroundColor="{DynamicResource background}"
+                CornerRadius="0, 5, 0, 5"
+                Style="{StaticResource listOptionLayoutStyle}">
+                <Label
+                    x:Name="listIcon"
+                    ClassId="ListView"
+                    FontFamily="{DynamicResource FontAwesomeSolid}"
+                    Style="{StaticResource listOptionLayoutTextStyle}"
+                    Text="{x:Static fontawesome:FontAwesomeIcons.ThList}"
+                    TextColor="{StaticResource primaryColor}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="ColorStates">
+                        <VisualState x:Name="UnSelect">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{StaticResource primaryColor}" />
+                                <Setter TargetName="listIcon" Property="Label.TextColor" Value="{DynamicResource background}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Select">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{DynamicResource background}" />
+                                <Setter TargetName="listIcon" Property="Label.TextColor" Value="{StaticResource primaryColor}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </yummy:PancakeView>
+
+        </StackLayout>
+
+        <StackLayout Padding="20,5,20,5">
+            <CollectionView
+                ItemTemplate="{StaticResource newsArticleTemplateSelector}"
+                ItemsSource="{Binding Articles}"
+                VerticalScrollBarVisibility="Never">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <!--<CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <template:NewsArticleCardComponent ListLayout="{Binding BindingContext.ListLayout, Source={x:Reference MainView}}" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>-->
+            </CollectionView>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

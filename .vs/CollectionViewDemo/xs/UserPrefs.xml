@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{8FF00ED3-ED0D-433E-A5FC-F49DD908B216}|Default">
+  <MonoDevelop.Ide.ItemProperties.CollectionViewDemo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53BC026E-B2EF-4EB8-BF9C-65FCF4BBA8D2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CollectionViewDemo/CollectionViewDemo/App.xaml">
+    <Files>
+      <File FileName="CollectionViewDemo/CollectionViewDemo/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="CollectionViewDemo/CollectionViewDemo/App.xaml" Line="10" Column="49" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CollectionViewDemo" expanded="True">
+            <Node name="CollectionViewDemo" expanded="True">
+              <Node name="App.xaml" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CollectionViewDemo.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
